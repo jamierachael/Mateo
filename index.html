@@ -19,7 +19,7 @@
         .test {
             /* border: 2px solid purple; */
             /* margin-bottom: 10%; */
-            background-color: ivory;
+            /* background-color: ivory; */
 
         }
 
@@ -62,6 +62,46 @@
             position: relative;
             padding-top: 10%;
             margin-top: 10%;
+        }
+
+        #download-button {
+            /* margin-top: 20px; */
+            /* color: #777777; */
+            background-color:
+                #777777;
+        }
+
+        .header {
+            color: #777777;
+        }
+
+        nav {
+            border: 3px solid ivory;
+            position: sticky;
+            top: 0;
+            z-index: 2;
+        }
+
+        .parallax-container {
+            min-height: 380px;
+            line-height: 0;
+            height: auto;
+            color: rgba(255, 255, 255, .9);
+        }
+
+        .parallax-container .section {
+            width: 100%;
+        }
+
+        @media only screen and (max-width : 992px) {
+            .parallax-container .section {
+                position: absolute;
+                top: 40%;
+            }
+
+            #index-banner .section {
+                top: 10%;
+            }
         }
     </style>
 </head>
@@ -127,13 +167,13 @@
                 <div class="section no-pad-bot" id="index-banner">
                     <div class="container">
                         <br><br>
-                        <h1 class="header center orange-text">Mateo Atom</h1>
+                        <h1 class="header center">Mateo Atom</h1>
                         <div class="row center">
                             <h5 class="header col s12 light">Urban Beauty, Hidden Gems, Abandoned Places</h5>
                         </div>
                         <div class="row center">
                             <a href="http://materializecss.com/getting-started.html" id="download-button"
-                                class="btn-large waves-effect waves-light orange">Get Started</a>
+                                class="btn-large waves-effect waves-light">Get Started</a>
                         </div>
                         <br><br>
 
@@ -199,6 +239,22 @@
         <br><br>
     </div>
 
+    <!-- Start -->
+
+    <div class="parallax-container valign-wrapper">
+        <div class="section no-pad-bot">
+            <div class="container">
+                <div class="row center">
+                    <h5 class="header col s12 light white-text">A modern responsive front-end framework based on
+                        Material Design
+                    </h5>
+                </div>
+            </div>
+        </div>
+        <div class="parallax"><img src="pano-field.jpg" alt="Unsplashed background img 3"></div>
+    </div>
+    <!-- End -->
+
     <footer class="page-footer orange">
         <div class="container">
             <div class="row">
@@ -249,6 +305,14 @@
         $(document).ready(function () {
             $('.carousel').carousel();
         });
+        (function ($) {
+            $(function () {
+
+                $('.sidenav').sidenav();
+                $('.parallax').parallax();
+
+            }); // end of document ready
+        })(jQuery); // end of jQuery name space
     </script>
 </body>
 
